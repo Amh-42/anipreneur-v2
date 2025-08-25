@@ -56,11 +56,51 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        .hero-description {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #475569;
+            margin-block-end: clamp(2rem, 5vw, 3rem);
+            line-height: 1.7;
+            max-width: 60ch;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        .compliance-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f8fafc;
+            padding-block: 0.5rem;
+            padding-inline: 1rem;
+            border-radius: 2rem;
+            font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+            font-weight: 500;
+            color: #10b981;
+            margin-block-end: clamp(1rem, 4vw, 2rem);
+            border: 1px solid #e2e8f0;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
         [data-theme="dark"] .hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
         [data-theme="dark"] .hero-title {
             color: #f1f5f9;
+        }
+        [data-theme="dark"] .hero-description {
+            color: #e2e8f0;
+        }
+        [data-theme="dark"] .compliance-badge {
+            background: #1e293b;
+            border-color: #334155;
+            color: #34d399;
         }
     </style>
     
