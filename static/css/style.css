@@ -48,7 +48,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Manrope', sans-serif;
             background-color: var(--bg-primary);
             background-image: 
                 linear-gradient(rgba(0, 132, 255, 0.08) 1px, transparent 1px),
