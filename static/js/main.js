@@ -93,10 +93,15 @@ if (mobileMenuToggle && mobileMenu) {
     const mobileMenuIcon = mobileMenuToggle.querySelector('i');
 
     mobileMenuToggle.addEventListener('click', () => {
+        const isExpanded = mobileMenu.classList.contains('active');
         mobileMenu.classList.toggle('active');
         
+        // Update ARIA attributes
+        mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenuToggle.setAttribute('aria-label', !isExpanded ? 'Close mobile menu' : 'Open mobile menu');
+        
         // Toggle hamburger icon
-        if (mobileMenu.classList.contains('active')) {
+        if (!isExpanded) {
             mobileMenuIcon.className = 'fas fa-times';
         } else {
             mobileMenuIcon.className = 'fas fa-bars';
@@ -107,6 +112,8 @@ if (mobileMenuToggle && mobileMenu) {
     document.querySelectorAll('.mobile-nav-links a, .mobile-cta a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Open mobile menu');
             mobileMenuIcon.className = 'fas fa-bars';
         });
     });
@@ -115,6 +122,8 @@ if (mobileMenuToggle && mobileMenu) {
     document.addEventListener('click', (e) => {
         if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
             mobileMenu.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Open mobile menu');
             mobileMenuIcon.className = 'fas fa-bars';
         }
     });
@@ -215,6 +224,12 @@ window.addEventListener('scroll', () => {
 // Add loading animation on page load
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    
+    // Set current year in footer
+    const currentYearElement = document.getElementById('currentYear');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
     
     // Trigger loading animations
     document.querySelectorAll('.loading').forEach((el, index) => {

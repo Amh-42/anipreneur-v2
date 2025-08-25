@@ -2,6 +2,8 @@
 
 {% block title %}Anipreneur - Turn Skills Into Focused Income{% endblock %}
 
+{% block meta_description %}Join Anipreneur's anime-inspired community of multi-skilled entrepreneurs. Learn proven systems to turn your scattered skills into focused income streams with step-by-step guidance and elite mentorship.{% endblock %}
+
 {% block nav_links %}
 <li><a href="#benefits">Community</a></li>
 <li><a href="#about">About</a></li>
@@ -25,9 +27,9 @@
                 </p>
                 <div class="hero-actions loading">
 
-                    <a href="{{ url_for('checkout') }}" class="cta-button skool-button">
+                    <a href="{{ url_for('checkout') }}" class="cta-button skool-button" aria-label="Join Anipreneur Skool Community">
                         Join Skool
-                        <span class="skool-logo">s<span class="skool-k">k</span></span>
+                        <span class="skool-logo" aria-hidden="true">s<span class="skool-k">k</span></span>
                     </a>
                 </div>
             </div>
@@ -46,11 +48,11 @@
         <div class="benefits-container">
             <div class="section-header">
                 <div class="section-tag">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-users" aria-hidden="true"></i>
                     COMMUNITY
                 </div>
                 <h2 class="section-title">Free Skool Community</h2>
-                <h2 class="section-subtitle">Plus Paid Elite Access</h2>
+                <p class="section-subtitle">Plus Paid Elite Access</p>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card loading">
@@ -104,7 +106,7 @@
         <div class="about-container">
             <div class="about-content">
                 <div class="section-tag">
-                    <i class="fas fa-fire"></i>
+                    <i class="fas fa-fire" aria-hidden="true"></i>
                     ABOUT Anipreneur
                 </div>
                 <h2>Who we are</h2>
@@ -155,11 +157,11 @@
         <div class="pricing-container">
             <div class="section-header">
                 <div class="section-tag">
-                    <i class="fas fa-crown"></i>
+                    <i class="fas fa-crown" aria-hidden="true"></i>
                     PRICING
                 </div>
                 <h2 class="section-title">Choose Your Path</h2>
-                <h2 class="section-subtitle">Free Community or Elite Access</h2>
+                <p class="section-subtitle">Free Community or Elite Access</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card free-card loading">
@@ -200,9 +202,9 @@
                             <span>Community Wins & Showcases</span>
                         </div>
                     </div>
-                    <a href="{{ url_for('checkout') }}" class="pricing-button free-button">
+                    <a href="{{ url_for('checkout') }}" class="pricing-button free-button" aria-label="Join Free Anipreneur Community on Skool">
                         Join Free Community
-                        <span class="skool-logo">s<span class="skool-k">k</span></span>
+                        <span class="skool-logo" aria-hidden="true">s<span class="skool-k">k</span></span>
                     </a>
                 </div>
 
@@ -253,9 +255,9 @@
                             <span>Founders Badge Role</span>
                         </div>
                     </div>
-                    <a href="{{ url_for('checkout') }}" class="pricing-button elite-button">
+                    <a href="{{ url_for('checkout') }}" class="pricing-button elite-button" aria-label="Get Elite Access to Anipreneur+ on Skool">
                         Get Elite Access (Skool)
-                        <span class="skool-logo">s<span class="skool-k">k</span></span>
+                        <span class="skool-logo" aria-hidden="true">s<span class="skool-k">k</span></span>
                     </a>
                 </div>
             </div>
@@ -267,7 +269,7 @@
         <div class="intro-container">
             <div class="intro-content">
                 <div class="section-tag">
-                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
                     1-MINUTE INTRO
                 </div>
                 <h2>See What Anipreneur Is About</h2>
@@ -306,11 +308,11 @@
         <div class="vault-container">
             <div class="section-header">
                 <div class="section-tag">
-                    <i class="fas fa-link"></i>
+                    <i class="fas fa-link" aria-hidden="true"></i>
                     AFFILIATE VAULT
                 </div>
                 <h2 class="section-title">Curated Tool Stack</h2>
-                <h2 class="section-subtitle">Revenue Share Model</h2>
+                <p class="section-subtitle">Revenue Share Model</p>
             </div>
             <div class="vault-access">
                 <div class="access-note">
@@ -363,9 +365,9 @@
                 </div>
             </div>
             <div class="vault-action">
-                <a href="{{ url_for('courses') }}" class="cta-button vault-link">
+                <a href="{{ url_for('courses') }}" class="cta-button vault-link" aria-label="View All Anipreneur Courses">
                     View All Courses
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
         </div>

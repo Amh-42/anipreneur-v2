@@ -4,8 +4,8 @@
             --bg-secondary: #f8fafc;
             --bg-tertiary: #f1f5f9;
             --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
             --border-color: #e2e8f0;
             --accent-primary: #0084FF;
             --accent-secondary: #0066CC;
@@ -23,8 +23,8 @@
             --bg-secondary: #1e293b;
             --bg-tertiary: #334155;
             --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
+            --text-secondary: #e2e8f0;
+            --text-muted: #cbd5e1;
             --border-color: #334155;
             --accent-primary: #0084FF;
             --accent-secondary: #339FFF;
@@ -714,10 +714,11 @@
         }
 
         .section-subtitle {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.2;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 2rem;
         }
 
         .benefits-grid {
@@ -1521,8 +1522,7 @@
                 margin-inline: auto;
             }
 
-            .section-title,
-            .section-subtitle {
+            .section-title {
                 font-size: clamp(2.5rem, 4vw, 3rem);
             }
         }
