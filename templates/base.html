@@ -21,11 +21,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
+    <!-- Critical CSS for LCP optimization -->
+    <style>
+        /* Critical hero styles for LCP */
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            padding-block: clamp(6rem, 15vh, 8rem) 2rem;
+            padding-inline: clamp(1rem, 5vw, 2rem);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .hero-container {
+            max-width: min(75rem, calc(100vw - 2rem));
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(2rem, 5vw, 4rem);
+            align-items: center;
+        }
+        .hero-title {
+            font-size: clamp(1.75rem, 7vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-block-end: clamp(1rem, 4vw, 2rem);
+            color: #1e293b;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hero-title .hero-subtitle {
+            display: block;
+            background: linear-gradient(135deg, #0084FF 0%, #0066CC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        [data-theme="dark"] .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        [data-theme="dark"] .hero-title {
+            color: #f1f5f9;
+        }
+    </style>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    
-    <!-- Skool Checkout Script -->
-    <script async defer src="https://js.skool.com/static/checkout/loader.js"></script>
     
     {% block extra_css %}{% endblock %}
 </head>

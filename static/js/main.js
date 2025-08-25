@@ -231,8 +231,15 @@ window.addEventListener('load', () => {
         currentYearElement.textContent = new Date().getFullYear();
     }
     
-    // Trigger loading animations
+    // Trigger loading animations (skip hero content for LCP optimization)
     document.querySelectorAll('.loading').forEach((el, index) => {
+        // Skip hero content elements for faster LCP
+        if (el.closest('.hero-content')) {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            return;
+        }
+        
         setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
