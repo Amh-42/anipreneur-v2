@@ -39,10 +39,15 @@ def courses():
     """Courses page route"""
     return render_template('courses.html')
 
+@app.route('/skool')
+def skool():
+    """Redirect to Anipreneur Skool community"""
+    return redirect('https://www.skool.com/anipreneur-2551/about?ref=4d9f8acb9c414391b52aafeda5a69906')
+
 @app.route('/checkout')
 def checkout():
-    """Checkout page route for Anipreneur+ Elite access via Skool"""
-    return render_template('checkout.html')
+    """Redirect old checkout links to Skool community"""
+    return redirect(url_for('skool'))
 
 @app.route('/friday_kit', methods=['GET', 'POST'])
 def friday_kit():
